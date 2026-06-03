@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 async function chatBot(prompt, context, model) {
@@ -26,15 +25,11 @@ const chatInput = document.getElementById("chat-input");
 const sendButton = document.getElementById("send-button")
 
 chatInput.addEventListener("input", expandInput)
-=======
-document.getElementById("chat-input").addEventListener("input", expandInput)
->>>>>>> 45960a5 (initial commit)
 
 function expandInput () {
     const input = document.getElementById("chat-input");
     input.style.height = "auto";
     input.style.height = input.scrollHeight + "px";
-<<<<<<< HEAD
 }
 
 function createMessage (text, sender) {
@@ -70,6 +65,4 @@ function sendMessage (event) {
             chatBot(text, "", "");
         }
     }
-=======
->>>>>>> 45960a5 (initial commit)
 }
