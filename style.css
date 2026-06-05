@@ -2,6 +2,7 @@
 https://icon-sets.iconify.design/ 
 */
 
+<<<<<<< HEAD
 html {
     height: 100%;
     width: 100%;
@@ -13,15 +14,26 @@ body {
 
     font-size: 1rem;
     font-family: monospace;
+=======
+body {
+    font-size: 1rem;
+>>>>>>> 45960a5 (initial commit)
 
     margin: 0;
     padding: 0;
 
     /* color variables */
+<<<<<<< HEAD
     --main-color: 25, 25, 40;
     --reverse-main-color: 230, 230, 230;
     --accent-color: 158, 106, 182;
     --sub-accent-color: 234, 234, 112;
+=======
+    --main-color: rgb(25, 25, 40);
+    --reverse-main-color: rgb(230, 230, 230);
+    --accent-color: rgb(158, 106, 182);
+    --sub-accent-color: rgb(234, 234, 112);
+>>>>>>> 45960a5 (initial commit)
 }
 
 button {
@@ -44,19 +56,32 @@ button:hover {
 
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     background-color: color-mix(in srgb, rgb(var(--main-color)) 90%, white);
+=======
+    background-color: color-mix(in srgb, var(--main-color) 95%, white);
+>>>>>>> 45960a5 (initial commit)
 }
 
 .input-container {
     margin-top: auto;
     margin-bottom: 50px;
 
+<<<<<<< HEAD
     background-color: rgb(var(--main-color));
     border: solid 1px rgb(var(--accent-color));
     border-radius: 12px;
     padding: 10px 20px;
 
     width: 60%;
+=======
+    background-color: var(--main-color);
+    border: solid 1px var(--accent-color);
+    border-radius: 12px;
+    padding: 10px 20px;
+
+    width: 50%;
+>>>>>>> 45960a5 (initial commit)
     min-height: 100px;
     max-height: 50%;
 
@@ -65,7 +90,11 @@ button:hover {
 }
 
 .input-container:focus {
+<<<<<<< HEAD
     outline: solid .5px rgb(var(--sub-accent-color));
+=======
+    outline: solid .5px var(--sub-accent-color);
+>>>>>>> 45960a5 (initial commit)
 }
 
 .input {
@@ -73,12 +102,19 @@ button:hover {
     border: unset;
     resize: none;
 
+<<<<<<< HEAD
     color: color-mix(in srgb, rgb(var(--accent-color)) 70%, white);
     font-size: 1em;
 
     width: 100%;
 
     transition: height 0.5s ease;
+=======
+    color: color-mix(in srgb, var(--accent-color) 70%, white);
+    font-size: 1em;
+
+    width: 100%;
+>>>>>>> 45960a5 (initial commit)
 }
 
 .input:focus {
@@ -109,18 +145,29 @@ button:hover {
 }
 
 #tools {
+<<<<<<< HEAD
     color: rgb(var(--sub-accent-color));
+=======
+    color: var(--sub-accent-color);
+    /* background-color: var(--accent-color); */
+>>>>>>> 45960a5 (initial commit)
     font-size: 5em;
 }
 
 #send-button {
+<<<<<<< HEAD
     color: rgb(var(--reverse-main-color));
     background-color: rgb(var(--accent-color));
+=======
+    color: var(--reverse-main-color);
+    background-color: var(--accent-color);
+>>>>>>> 45960a5 (initial commit)
     font-size: 1.5em;
     
     border-radius: 20%;
 }
 
+<<<<<<< HEAD
 #messages {
     display: flex;
     flex-direction: column;
@@ -151,5 +198,8 @@ button:hover {
     border-bottom-left-radius: 0px;
     background-color: rgb(var(--main-color));
 }
+=======
+
+>>>>>>> 45960a5 (initial commit)
 
 
