@@ -1,2 +1,2 @@
 # local-LLM-usage
-locally hosted web app to utilize locally run LLMs with a nice GUI
+This project is a local web app that creates a nice GUI to communicate with locally run LLMs instead of doing so through the terminal
