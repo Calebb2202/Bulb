@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS chats
+DROP TABLE IF EXISTS messages
+
+CREATE TABLE chats (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL
+);
+
+CREATE TABLE messages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chat_id INTEGER NOT NULL,
+    role TEXT NOT NULL,
+    model TEXT,
+    content TEXT NOT NULL,
+    FOREIGN KEY (chat_id) REFERENCES chats(id)
+);
+

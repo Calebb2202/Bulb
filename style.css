@@ -2,26 +2,62 @@
 https://icon-sets.iconify.design/ 
 */
 
-html {
-    height: 100%;
-    width: 100%;
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 body {
-    height: 100%;
-    width: 100%;
-
     font-size: 1rem;
     font-family: monospace;
 
     margin: 0;
     padding: 0;
 
+    background-color: color-mix(in srgb, rgb(var(--main-color)) 90%, rgb(var(--reverse-main-color)));
+
     /* color variables */
+
+    /* main-color usually white or black color, opposite of reverse main, main background color of whole page and messages*/
+    /* reverse-main-color usually white or black color opposite of main, mainly used to mix with an accent color or sub accent color to make it brighter or darker */
+    
+
+    /* accent-color main color that stands out, used for message font color, borders of messages and input menu, needs to stand out on a background of main color */
+    /* sub-accent-color other color that will stand out, used for bold/header text in messages, needs to stand out on a background of main color */
     --main-color: 25, 25, 40;
     --reverse-main-color: 230, 230, 230;
-    --accent-color: 158, 106, 182;
-    --sub-accent-color: 234, 234, 112;
+    --accent-color: 177, 100, 212;
+    --sub-accent-color: 223, 223, 114; 
+
+    
+    --code-block-background: 40, 44, 52; 
+
+
+    /* #################### */
+    /* #region color themes */
+    /* #################### */
+
+    /* main theme night alley */
+    /* 
+    --main-color: 25, 25, 40;
+    --reverse-main-color: 230, 230, 230;
+    --accent-color: 177, 100, 212;
+    --sub-accent-color: 223, 223, 114; 
+    */
+
+
+    /* Solar Flare */
+/*         
+    --main-color: 10, 12, 16;
+    --reverse-main-color: 240, 242, 245;
+    --accent-color: 200, 205, 215;
+    --sub-accent-color: 255, 186, 8; 
+    */
+
+    /* #endregion */
 }
 
 button {
@@ -44,7 +80,6 @@ button:hover {
 
     width: 100%;
     height: 100%;
-    background-color: color-mix(in srgb, rgb(var(--main-color)) 90%, white);
 }
 
 .input-container {
@@ -57,10 +92,6 @@ button:hover {
     padding: 10px 20px;
 
     width: 60%;
-<<<<<<< HEAD
-
-=======
->>>>>>> e23885d (initial commit)
     min-height: 100px;
     max-height: 50%;
 
@@ -77,12 +108,10 @@ button:hover {
     border: unset;
     resize: none;
 
-    color: color-mix(in srgb, rgb(var(--accent-color)) 70%, white);
+    color: color-mix(in srgb, rgb(var(--accent-color)) 70%, rgb(var(--reverse-main-color)));
     font-size: 1em;
 
     width: 100%;
-
-    transition: height 0.5s ease;
 }
 
 .input:focus {
@@ -131,29 +160,98 @@ button:hover {
     gap: 20px;
     overflow-y: auto;
     width: 60%;
-    margin: 20px 0px;
+    padding: 30px;
 
     /* padding to move scroll bar away */
-    padding-right: 30px;
+    /* padding-right: 30px; */
 }
 
 .message {
     border: solid 1px rgb(var(--accent-color));
     color: rgb(var(--accent-color));
     border-radius: 10px;
-    padding: 10px;
     max-width: 95%;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .user {
     margin-left: auto;
     border-bottom-right-radius: 0px;
+    padding: 10px;
 }
 
-.bot {
+.assistant {
     margin-right: auto;
     border-bottom-left-radius: 0px;
     background-color: rgb(var(--main-color));
+
+    /* background-color: color-mix(in srgb, rgb(var(--main-color)) 95%, rgb(var(--accent-color))); */
+    border: 1px solid rgba(var(--accent-color), 0.5); /* Fades the border slightly */
+    padding: 0 10px;
+} 
+
+/* #region styling for assistant markdown messages */
+
+.code-block {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(var(--code-block-background));
+    border: 1px solid color-mix(in srgb, rgb(var(--code-block-background)) 90%, rgb(var(--reverse-main-color)));
+    border-radius: 10px;
+
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--accent-color)) transparent;
+    margin: 15px 0;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
 
+    flex-direction: row;
+
+    font-size: 0.9em;
+    color: rgb(230, 230, 230);
+}
+
+.copy-button {
+    color: rgb(230, 230, 230);
+    font-size: 1.25em;
+    padding-top: 4px;
+    border-radius: 15px;
+}
+
+.copy-button:hover {
+    background-color: rgb(0, 0, 0, 0.2)
+}
+
+.message pre {
+    font-size: 0.9em;
+    background: none;
+    margin: 0;
+    padding: 0px;
+}
+
+.assistant :is(h1, h2, h3, h4, h5, h6) {
+    color: rgb(var(--sub-accent-color));
+    text-shadow: 0 0 5px rgba(var(--sub-accent-color), 0.3);
+}
+
+.assistant strong, a {
+    color: rgb(var(--sub-accent-color));
+}
+
+.assistant hr {
+    border: none;                  /* Remove the default browser line style */
+    height: 1px;                   /* Define the thickness of the line */
+    background-color: rgb(var(--accent-color)); /* Fill it with your accent color */
+    margin: 15px 0;                /* Add space above and below the line */
+    opacity: 0.6;                  /* Optional: dim it slightly so it isn't distracting */
+}
+/* #endregion */
